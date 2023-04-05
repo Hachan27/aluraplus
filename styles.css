@@ -1,0 +1,156 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C ;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c93fd;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400; /*Peso da fonte*/
+}
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url("./assets/__Background.png");
+    background-repeat: no-repeat; /*Usado para nao ficar repetindo a imagem de fundo infinitamente*/
+    background-size: contain; /*Vai preencher todo o container, que no caso é a section, e preencher*/
+    align-items: center; /*como ta no grid coluna ele alinha no centro da coluna*/
+    text-align: center; /*alinha tudo que faz parte de um elemento de bloco, inclusive imagem*/
+}
+
+.container {
+    height: 100vh; /* esse vh é altura da tela do dispositivo e vai usar 100% */
+    display: grid;
+    grid-template-columns: 50% 50%; /*Faz a separacao em elementos de bloco*/
+}
+
+.container__botao { /*Aqui eu estou fazendo um botao dentro da pag*/
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em; /* padding de 1em carrega o tamanho da fonte*/
+    color: var(--branco-principal);
+    display: block; /*Ele vai ocupar o espacao inteiro dele*/
+    text-decoration: none; /*aqui tira sublinhado e etc do texto*/
+    margin-bottom: 1em; /*coloquei uma espcamento entre os botoes*/
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    margin: 0 6em; /*coloquei uma margem*/
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em; /*Quando usamos dois numeros o primeiro vai pegar cima e baixo e o proximo numero esquerda e direita*/
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2en;
+}
+
+.dispositivos {
+    text-align: center;
+
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /*Aqui eu tirei as bolinhas, o estilo, da lista*/
+    margin: 5em 0; /*Aqui eu coloquei um margem na parte de cima e baixo pq tava grudado no final da pag*/
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape__lista { /*.rodape__lista e transformei em um flex-container (consequentemente todos os itens ficaram na direção de linha, ou seja, um ao lado do outro) através do display: flex, em seguida centralizei com o justify-content, retirei as bolinhas que aparecem ao lado de cada item com o list-style-type e afastei o topo do titulo do footer com o margin-top.*/
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a { /* foquei diretamente nos links dessa lista com o seletor de classe em conjunto do elemento: .lista__link a. Para essa parte, retirei a decoração do texto com a propriedade text-decoration, alterei a cor para branco com o color e separei um link do outro criando uma margem a esquerda, através da propriedade margin-left.*/
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto { /* dois textos de sobre a Alura. Seguindo essa ordem, comecei a estiliza-los, selecionando eles pela classe .rodape__texto que os mesmos compartilham. Assim, defini uma margem para cima e baixo (com a propriedade margin), sua cor (color) com o valor da variável –cinza-secundario e o tamanho da fonte (font-size) como 14px.*/
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+    /*E por fim, faltava centralizar todos elementos do rodapé. Então, selecionei a classe desse elemento, a .rodape, definindo o alinhamento do texto com text-align como center. Também construi margens no topo que separaram o footer do fim da página e da seção anterior, além de margens para o lado esquerdo e direito (tudo isso através de uma única propriedade: a margin).*/
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.lista__link a:active { /*Quando eu clico há uma mundanca no a,link,*/
+    color: purple;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
