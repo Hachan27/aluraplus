@@ -21,7 +21,7 @@ body {
 }
 
 .principal {
-    background-image: url("./assets/__Background.png");
+    background-image: url("assets/__Background.png");
     background-repeat: no-repeat; /*Usado para nao ficar repetindo a imagem de fundo infinitamente*/
     background-size: contain; /*Vai preencher todo o container, que no caso é a section, e preencher*/
     align-items: center; /*como ta no grid coluna ele alinha no centro da coluna*/
